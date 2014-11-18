@@ -12,13 +12,13 @@ public class WebBlog {
         posts.addpost(post);
         post = new Post("2", "2", "2", "2");
         posts.addpost(post);
-        output.outpost(posts.get(2));
-        output.outpost(posts.get(1));
-        output.outpost(posts.get(10));
-        posts.delete(1);
-        output.outpost(posts.get(1));
-        post = new Post("3", "3", "3", "3");
+        post = new Post("2", "3", "3", "3");
         posts.addpost(post);
+
+        posts.search("2");
+        posts.delete(4);
+        posts.search("2");
+        posts.search("ololo");
 
     }
 }

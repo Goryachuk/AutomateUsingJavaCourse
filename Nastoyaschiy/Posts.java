@@ -12,31 +12,40 @@ public class Posts {
             post.setid(1);
         }
         blogdb.add(post);
-        blogdb.trimToSize();
     }
 
     public Post get(int id) {
         Post post;
         post = null;
-        for (Post p : blogdb) {
-            if (p.getid() == id) post = p;
+        for (int i = 0; i < blogdb.size(); i++) {
+            if (blogdb.get(i).getid() == id) {
+                post = blogdb.get(i);
+                break;
+            }
         }
         return post;
     }
 
 
-    public int search(String head) {
-        int i = 0;
+    public void search(String head) {
+        boolean found = false;
         for (Post p : blogdb) {
-            if (p.gethead().equals(head)) i = p.getid();
+            if (p.gethead().equals(head)) {
+                output.outpost(p);
+                found = true;
+            }
         }
-        return i;
+        if (!found) System.out.println("Posts with head \"" + head + "\" not found");
     }
 
     public void delete(int id) {
-        for (Post p : blogdb) {
-            if (p.getid() == id) blogdb.remove(p);
+        for (int i = 0; i < blogdb.size(); i++) {
+            if (blogdb.get(i).getid() == id) {
+                blogdb.remove(i);
+                break;
+            }
         }
+        blogdb.trimToSize();
     }
 
 }
