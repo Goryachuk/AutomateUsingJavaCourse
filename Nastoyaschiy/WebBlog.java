@@ -17,8 +17,10 @@ public class WebBlog {
 
         posts.search("2");
         posts.delete(4);
-        posts.search("2");
         posts.search("ololo");
+        post = new Post("2", "5", "5", "3");
+        posts.addpost(post);
+        posts.search("2");
 
     }
 }

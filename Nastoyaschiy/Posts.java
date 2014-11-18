@@ -4,13 +4,11 @@ import java.util.ArrayList;
 public class Posts {
 
     private ArrayList<Post> blogdb = new ArrayList<Post>(0);
+    private int lastID;
 
     public void addpost(Post post) {
-        if (blogdb.size() > 0) {
-            post.setid(blogdb.get(blogdb.size()-1).getid() + 1);
-        } else {
-            post.setid(1);
-        }
+        lastID++;
+        post.setid(lastID);
         blogdb.add(post);
     }
 
