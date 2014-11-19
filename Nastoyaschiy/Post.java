@@ -6,57 +6,62 @@ public class Post {
     private int id;
     private String head;
     private String body;
-    private Date date;
+    private Date createDate;
+    private Date modifyDate;
     private String picture;
     private String tag;
 
     Post(String head, String body, String picture, String tag) {
         this.head = head;
         this.body = body;
-        this.date = new Date();
+        this.createDate = new Date();
+        this.modifyDate = new Date();
         this.picture = picture;
         this.tag = tag;
     }
 
-    public int getid() {
+    public int getId() {
         return id;
     }
-    public void setid(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String gethead() {
+    public String getHead() {
         return head;
     }
-    public void sethead(String head) {
+    public void setHead(String head) {
         this.head = head;
     }
 
-    public String getbody() {
+    public String getBody() {
         return body;
     }
-    public void setbody(String body) {
+    public void setBody(String body) {
         this.body = body;
     }
 
-    public Date getdate() {
-        return date;
+    public Date getCreateDate() {
+        return createDate;
     }
-    public void setdate() {
-        this.date = new Date();
+    public Date getModifyDate() {
+        return modifyDate;
+    }
+    public void setModifyDate() {
+        this.modifyDate = new Date();
     }
 
-    public String getpicture() {
+    public String getPicture() {
         return picture;
     }
-    public void setpicture(String picture) {
+    public void setPicture(String picture) {
         this.picture = picture;
     }
 
-    public String gettag() {
+    public String getTag() {
         return tag;
     }
-    public void settag(String tag) {
+    public void setTag(String tag) {
         this.tag = tag;
     }
 }

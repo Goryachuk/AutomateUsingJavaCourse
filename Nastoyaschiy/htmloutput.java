@@ -5,10 +5,10 @@ import java.io.IOException;
 public class htmloutput {
 
     public static void out(Post post) throws IOException {
-        String head = post.gethead();
-        String body = post.getbody();
-        String picture = post.getpicture();
-        String tag = post.gettag();
+        String head = post.getHead();
+        String body = post.getBody();
+        String picture = post.getPicture();
+        String tag = post.getTag();
 
         File file = new File("D:\\post.html");
         if(!file.exists()){
