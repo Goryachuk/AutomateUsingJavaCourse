@@ -1,5 +1,5 @@
 
-package webblog;
+package webblog_new;
 
 import java.util.Scanner;
 
